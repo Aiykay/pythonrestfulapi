@@ -9,14 +9,14 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 
 import os
 import sys
+from django.core.wsgi import get_wsgi_application
 
 # your project path
-project_home = '/home/Alexander2602/pythonrestfulapi'
-if project_home not in sys.path:
-    sys.path.insert(0, project_home)
+# project_home = '/home/Alexander2602/pythonrestfulapi'
+# if project_home not in sys.path:
+#     sys.path.insert(0, project_home)
+
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'piggyvest.settings')
-
-from django.core.wsgi import get_wsgi_application
 
 application = get_wsgi_application()
